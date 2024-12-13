@@ -1,0 +1,29 @@
+
+loadStringsfromMem_nonull.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <_start>:
+   0:	eb 20                	jmp    22 <_start+0x22>
+   2:	5e                   	pop    rsi
+   3:	48 31 c0             	xor    rax,rax
+   6:	b0 01                	mov    al,0x1
+   8:	48 31 ff             	xor    rdi,rdi
+   b:	48 83 c7 01          	add    rdi,0x1
+   f:	48 31 d2             	xor    rdx,rdx
+  12:	48 83 c2 0c          	add    rdx,0xc
+  16:	0f 05                	syscall
+  18:	48 31 c0             	xor    rax,rax
+  1b:	b0 3c                	mov    al,0x3c
+  1d:	48 31 ff             	xor    rdi,rdi
+  20:	0f 05                	syscall
+  22:	e8 db ff ff ff       	call   2 <_start+0x2>
+  27:	48                   	rex.W
+  28:	65 6c                	gs ins BYTE PTR es:[rdi],dx
+  2a:	6c                   	ins    BYTE PTR es:[rdi],dx
+  2b:	6f                   	outs   dx,DWORD PTR ds:[rsi]
+  2c:	20 77 6f             	and    BYTE PTR [rdi+0x6f],dh
+  2f:	72 6c                	jb     9d <_start+0x9d>
+  31:	64                   	fs
+  32:	0a                   	.byte 0xa
