@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <string.h>
+
+
+unsigned char code[] = "";
+
+
+int main(){
+	printf("Length:%d", (int)strlen(code));
+    	int(*ret)() = (int(*)())code;
+    	ret();
+}
+

@@ -11,12 +11,13 @@ shellcode:
 	; Move Syscall = 1
 	;mov rax,1
 	xor rax,rax     ; eliminate nulls
-	mov al,0x1        ;
+	add rax,0x1        ;
 
 	; Move fd = stdout = 1
 	;mov rdi,1
 	xor rdi,rdi     ; eliminate nulls
 	add rdi,0x1       ;
+
 
 	; Move length = 12
 	;mov rdx,12
@@ -32,4 +33,4 @@ shellcode:
 
 one:
 	call shellcode
-	string_msg: db "Hello world",0xa,0 ;;Hello world\n\0
+	string_msg: db "Hello world",0xa ;;Hello world\n\0
